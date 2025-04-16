@@ -11,8 +11,7 @@ plt.rcParams['axes.unicode_minus'] = False  # 解决负号显示问题
 st.title('🦵 膝骨关节炎（KOA）发病风险预测计算器')
 
 # 加载模型
-model_path = r'D:\李杰数据\streamlit\GradientBoosting_model.pkl' # 替换为你的模型路径
-model = joblib.load(model_path)
+model = joblib.load("GradientBoosting_model.pkl")
 
 # 创建输入表单
 st.sidebar.header('📋 患者信息录入')
