@@ -3,10 +3,16 @@ import pandas as pd
 import joblib
 import shap
 import matplotlib.pyplot as plt
+import matplotlib.font_manager as fm
+import os
 
-import matplotlib.pyplot as plt
-plt.rcParams['font.sans-serif'] = ['WenQuanYi Micro Hei']  # 文泉驿微米黑（Linux 推荐）
-plt.rcParams['axes.unicode_minus'] = False  # 解决负号显示问题
+# 获取字体文件的绝对路径（关键！）
+font_path = os.path.join(os.path.dirname(__file__), 'fonts', 'wqy-microhei.ttc')
+
+# 注册字体到 matplotlib
+fm.fontManager.addfont(font_path)
+plt.rcParams['font.sans-serif'] = fm.FontProperties(fname=font_path).get_name()
+plt.rcParams['axes.unicode_minus'] = False
 # 设置页面标题
 st.title('🦵 膝骨关节炎（KOA）发病风险预测计算器')
 
