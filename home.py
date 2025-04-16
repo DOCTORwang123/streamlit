@@ -5,7 +5,7 @@ import shap
 import matplotlib.pyplot as plt
 
 import matplotlib.pyplot as plt
-plt.rcParams['font.sans-serif'] = ['SimHei']  # 使用黑体（适用于 Windows）
+plt.rcParams['font.sans-serif'] = ['WenQuanYi Micro Hei']  # 文泉驿微米黑（Linux 推荐）
 plt.rcParams['axes.unicode_minus'] = False  # 解决负号显示问题
 # 设置页面标题
 st.title('🦵 膝骨关节炎（KOA）发病风险预测计算器')
